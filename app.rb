@@ -19,7 +19,7 @@ class App < Sinatra::Base
       erb :saywords
   end
 
-  get '/operation/:number1/:number2' do
+  get '/:operation/:number1/:number2' do
       erb :operation
     
       # number1 = params[:number1].to_i
@@ -41,3 +41,13 @@ class App < Sinatra::Base
 
 
 end
+
+   # <% if params[:operation] == 'add' %>
+ # <% elsif params[:operation] == "subtract" %>
+    #     <p> (@number1 - @number2).to_s </p>
+    # <% elsif params[:operation] == "multiply" %>
+    #     <p> (@number1 * @number2).to_s </p>
+    # <% else params[:operation] == "divide" %>
+    #     <p> (@number1 / @number2).to_s </p> 
+   # <% else puts "bingo" %>
+    #<% end %>
